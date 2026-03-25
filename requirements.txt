@@ -1,0 +1,13 @@
+ultralytics
+opencv-python==4.10.0.84
+pyttsx3
+SpeechRecognition
+pyaudio
+python-dotenv
+requests
+PyQt5
+PyQtWebEngine
+easyocr
+google-generativeai
+Pillow
+ollama
