@@ -1,0 +1,113 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #0d0d0d;
+  color: #eee;
+  font-family: 'Segoe UI', sans-serif;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+/* ── Main panels ── */
+.panels {
+  display: flex;
+  flex: 1;
+  gap: 2px;
+  background: #1a1a1a;
+  overflow: hidden;
+}
+
+.panel {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: #111;
+}
+
+.camera-panel { flex: 1.4; }
+.map-panel    { flex: 1; }
+
+.panel-label {
+  position: absolute;
+  top: 10px;
+  left: 12px;
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: #444;
+  font-weight: 600;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.camera-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  background: #000;
+}
+
+.map-container {
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+/* ── Status bar ── */
+.statusbar {
+  height: 38px;
+  background: #111;
+  border-top: 1px solid #222;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  gap: 0;
+  flex-shrink: 0;
+}
+
+.nav-state {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  min-width: 220px;
+}
+
+.gps-info {
+  font-size: 11px;
+  color: #00ffc8;
+  font-family: 'Consolas', monospace;
+  flex: 1;
+  text-align: center;
+}
+
+.alert-text {
+  font-size: 11px;
+  color: #ff6b6b;
+  min-width: 280px;
+  text-align: right;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: color 0.2s;
+}
+
+.alert-text.flash {
+  color: #fff;
+  animation: flash-anim 0.6s ease;
+}
+
+@keyframes flash-anim {
+  0%   { background: #ff6b6b22; }
+  50%  { background: #ff6b6b44; }
+  100% { background: transparent; }
+}

@@ -1,8 +1,46 @@
-.env
+# ── Python ───────────────────────────────────────────────────
 __pycache__/
-*.pyc
+*.py[cod]
 *.pyo
 *.pyd
-*.sqlite3
+.Python
+*.egg-info/
+dist/
+build/
+*.egg
 
+# Virtual environments
+venv/
+.venv/
+env/
+ENV/
+
+# ── Secrets ──────────────────────────────────────────────────
+.env
+*.env
+
+# ── ML model weights (large binary files) ────────────────────
 *.pt
+*.pth
+*.onnx
+*.weights
+
+# ── Runtime / generated data ─────────────────────────────────
+favourites.json
+*.log
+*.txt.tmp
+
+# ── Node / React ─────────────────────────────────────────────
+frontend/node_modules/
+frontend/.vite/
+frontend/dist/
+
+# ── OS junk ──────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ── IDE ──────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
